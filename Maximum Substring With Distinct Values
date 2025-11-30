@@ -1,0 +1,13 @@
+class Solution {
+    public int maxDistinct(String s) {
+        boolean[] seen = new boolean[256];
+        int count = 0;
+        for (char c : s.toCharArray()) {
+            if (!seen[c]) {
+                seen[c] = true;
+                count++;
+            }
+        }
+        return count;
+            }        
+}
